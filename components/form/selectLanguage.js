@@ -1,23 +1,24 @@
+import getVocabs from '../../api/vocabData';
 import renderToDOM from '../../utils/renderToDom';
 
-const selectLanguage = (firebaseKey) => {
+const selectLanguage = (firebaseKey, user) => {
   let domString = `<label for="author">Select an Author</label>
     <select class="form-control" id="author_id" required>
-    <option value="">Select an Author</option>`;
+    <option value="">Select a Language</option>`;
 
-  getAuthors().then((authorsArray) => {
-    authorsArray.forEach((author) => {
+  getVocabs(user.uid).then((vocabsArray) => {
+    vocabsArray.forEach((vocab) => {
       domString += `
           <option 
-            value="${author.firebaseKey}" 
-            ${firebaseKey === author.firebaseKey ? 'selected' : ''}>
-              ${author.first_name} ${author.last_name} 
+            value="${vocab.firebaseKey}" 
+            ${firebaseKey === vocab.firebaseKey ? 'selected' : ''}>
+              ${vocab.Language} 
           </option>`;
     });
 
     domString += '</select>';
 
-    renderToDOM('#select-author', domString);
+    renderToDOM('#select-language', domString);
   });
 };
 
