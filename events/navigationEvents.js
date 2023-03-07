@@ -1,4 +1,4 @@
-import getVocabs from '../api/vocabData';
+import { getVocabs } from '../api/vocabData';
 import addVocabForm from '../components/form/addVocabForm';
 import { showVocabs } from '../pages/vocabs';
 import { signOut } from '../utils/auth';

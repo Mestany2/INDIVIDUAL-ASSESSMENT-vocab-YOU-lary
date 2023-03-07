@@ -8,7 +8,7 @@ const addVocabForm = (user, obj = {}) => {
     <form id="${obj.firebaseKey ? `update-vocab--${obj.firebaseKey}` : 'submit-vocab'}" class="mb-4">
       <div class="form-group">
         <label for="title">Vocabulary</label>
-        <input type="text" class="form-control" id="title" aria-describedby="bookTitle" placeholder="Enter A Vocabulary" value="${obj.Vocabulary || ''}" required>
+        <input type="text" class="form-control" id="Vocabulary" aria-describedby="bookTitle" placeholder="Enter A Vocabulary" value="${obj.Vocabulary || ''}" required>
       </div>
       <div class="form-group">
         <label for="description">Definition</label>
