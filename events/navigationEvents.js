@@ -1,4 +1,5 @@
 import getVocabs from '../api/vocabData';
+import addVocabForm from '../components/form/addVocabForm';
 import { showVocabs } from '../pages/vocabs';
 import { signOut } from '../utils/auth';
 
@@ -11,6 +12,10 @@ const navigationEvents = (user) => {
   // Show Vocabs
   document.querySelector('#all-vocab').addEventListener('click', () => {
     getVocabs(user.uid).then(showVocabs);
+  });
+  // Add Vocabs
+  document.querySelector('#add-vocab').addEventListener('click', () => {
+    addVocabForm(user);
   });
 };
 

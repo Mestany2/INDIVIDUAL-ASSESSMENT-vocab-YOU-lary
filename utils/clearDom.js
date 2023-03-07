@@ -5,4 +5,11 @@ const clearDom = () => {
   document.querySelector('#view').innerHTML = '';
 };
 
-export default clearDom;
+const clearNav = () => {
+  document.querySelector('#navbarText').innerHTML = '';
+};
+
+export {
+  clearDom,
+  clearNav
+};

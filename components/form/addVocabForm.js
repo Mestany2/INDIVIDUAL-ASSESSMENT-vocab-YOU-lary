@@ -1,8 +1,10 @@
-import clearDom from "../../utils/clearDom"
+import { clearDom } from '../../utils/clearDom';
+import renderToDOM from '../../utils/renderToDom';
+import selectLanguage from './selectLanguage';
 
-const addVocabForm = (obj={}) => {
-    clearDom ();
-    const domString = `
+const addVocabForm = (user, obj = {}) => {
+  clearDom();
+  const domString = `
     <form id="${obj.firebaseKey ? `update-vocab--${obj.firebaseKey}` : 'submit-vocab'}" class="mb-4">
       <div class="form-group">
         <label for="title">Vocabulary</label>
@@ -19,7 +21,7 @@ const addVocabForm = (obj={}) => {
     </form>`;
 
   renderToDOM('#form-container', domString);
-  selectAuthor(`${obj.firebaseKey || ''}`);
+  selectLanguage(`${obj.firebaseKey || ''}`, user);
 };
 
 export default addVocabForm;
