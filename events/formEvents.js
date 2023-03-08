@@ -9,8 +9,9 @@ const formEvents = (user) => {
       const payload = {
         Vocabulary: document.querySelector('#Vocabulary').value,
         Definition: document.querySelector('#description').value,
-        Language: document.querySelector('#language').value,
-        uid: user.uid
+        language: document.querySelector('#language').value,
+        uid: user.uid,
+        time: new Date().toLocaleString(),
       };
       createVocab(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };

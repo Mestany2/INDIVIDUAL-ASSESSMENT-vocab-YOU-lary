@@ -1,8 +1,7 @@
 import { clearDom } from '../../utils/clearDom';
 import renderToDOM from '../../utils/renderToDom';
-import selectLanguage from './selectLanguage';
 
-const addVocabForm = (user, obj = {}) => {
+const addVocabForm = (obj = {}) => {
   clearDom();
   const domString = `
     <form id="${obj.firebaseKey ? `update-vocab--${obj.firebaseKey}` : 'submit-vocab'}" class="mb-4">
@@ -15,13 +14,19 @@ const addVocabForm = (user, obj = {}) => {
         <textarea class="form-control" placeholder="Definition" id="description" style="height: 100px">${obj.Definition || ''}</textarea>
       </div>
       <div class="form-group" id="select-language">
+      <label for="category">Category</label>
+        <select class="form-control" placeholder="Select Category" id="language" name="vocabCategory" value="${obj.language || ''}" required>
+        <option value="">Select a Language</option>
+          <option value="HTML" ${obj.language === 'HTML' ? 'selected' : ''}>HTML</option>
+          <option value="CSS" ${obj.language === 'CSS' ? 'selected' : ''}>CSS</option>
+          <option value="JavaScript" ${obj.language === 'JavaScript' ? 'selected' : ''}>JavaScript</option>
+        </select>
       </div>
       <button type="submit" class="btn btn-primary">Submit
       </button>
     </form>`;
 
   renderToDOM('#form-container', domString);
-  selectLanguage(`${obj.firebaseKey || ''}`, user);
 };
 
 export default addVocabForm;

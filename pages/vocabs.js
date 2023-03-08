@@ -7,6 +7,7 @@ const emptyVocabs = () => {
 };
 
 const showVocabs = (array) => {
+  console.warn('my array is', array);
   clearDom();
   let domString = '';
   array.forEach((item) => {
@@ -14,12 +15,13 @@ const showVocabs = (array) => {
       <div class="card">
           <div class="card-body" style="height: 25%;">
             <h2 class="card-title">${item.Vocabulary}</h2>
-            <h4 class="card-language">Language: ${item.Language}</h4>
+            <h4 class="card-language">Language: ${item.language}</h4>
             <h6 class="card-definition">${item.Definition}</h6>
               <hr>
               <i id="edit-vocab-btn--${item.firebaseKey}" class="btn btn-info">Edit</i>
               <i id="delete-vocab-btn--${item.firebaseKey}" class="btn btn-danger">Delete</i>
           </div>
+          <div class="card-footer">Submitted: ${item.time}</div>
         </div>`;
   });
   renderToDOM('#store', domString);

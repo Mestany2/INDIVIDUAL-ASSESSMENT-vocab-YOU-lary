@@ -70,10 +70,58 @@ const getSingleVocab = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getHTMLVocabs = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/Vocabs.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const html = Object.values(data).filter((obj) => obj.language === 'HTML');
+      resolve(html);
+    })
+    .catch(reject);
+});
+
+const getCSSVocabs = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/Vocabs.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const css = Object.values(data).filter((obj) => obj.language === 'CSS');
+      resolve(css);
+    })
+    .catch(reject);
+});
+
+const getJSVocabs = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/Vocabs.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const js = Object.values(data).filter((obj) => obj.language === 'JavaScript');
+      resolve(js);
+    })
+    .catch(reject);
+});
+
 export {
   getVocabs,
   createVocab,
   updateVocab,
   deleteVocab,
   getSingleVocab,
+  getHTMLVocabs,
+  getCSSVocabs,
+  getJSVocabs
 };
