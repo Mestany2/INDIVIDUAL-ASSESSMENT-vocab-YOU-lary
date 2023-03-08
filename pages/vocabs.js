@@ -12,13 +12,13 @@ const showVocabs = (array) => {
   array.forEach((item) => {
     domString += `
       <div class="card">
-          <div class="card-body" style="height: 180px;">
-            <h5 class="card-title">${item.Vocabulary}</h5>
-            <h6 class="card-title">${item.Definition}</h6>
+          <div class="card-body" style="height: 25%;">
+            <h2 class="card-title">${item.Vocabulary}</h2>
+            <h4 class="card-language">Language: ${item.Language}</h4>
+            <h6 class="card-definition">${item.Definition}</h6>
               <hr>
-              <i class="btn btn-success" id="view-book-btn--${item.firebaseKey}">View</i>
-              <i id="edit-book-btn--${item.firebaseKey}" class="btn btn-info">Edit</i>
-              <i id="delete-book-btn--${item.firebaseKey}" class="btn btn-danger">Delete</i>
+              <i id="edit-vocab-btn--${item.firebaseKey}" class="btn btn-info">Edit</i>
+              <i id="delete-vocab-btn--${item.firebaseKey}" class="btn btn-danger">Delete</i>
           </div>
         </div>`;
   });

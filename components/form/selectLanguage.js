@@ -10,7 +10,7 @@ const selectLanguage = (firebaseKey, user) => {
     vocabsArray.forEach((vocab) => {
       domString += `
           <option 
-            value="${vocab.firebaseKey}" 
+            value="${vocab.Language}" 
             ${firebaseKey === vocab.firebaseKey ? 'selected' : ''}>
               ${vocab.Language} 
           </option>`;
