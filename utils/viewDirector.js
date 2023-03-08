@@ -1,7 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import loginButton from '../components/loginButton';
-import { clearDom, clearNav } from './clearDom';
+import { clearBtn, clearDom } from './clearDom';
 import client from './client';
 import startApp from './startApp';
 
@@ -15,7 +15,7 @@ const ViewDirectorBasedOnUserAuthStatus = () => {
       // person is NOT logged in
       loginButton();
       clearDom();
-      clearNav();
+      clearBtn();
     }
   });
 };

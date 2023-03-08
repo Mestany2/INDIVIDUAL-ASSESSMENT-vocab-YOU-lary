@@ -2,6 +2,7 @@ import { clearDom } from '../../utils/clearDom';
 import renderToDOM from '../../utils/renderToDom';
 
 const addVocabForm = (obj = {}) => {
+  console.warn('my Obj is', obj);
   clearDom();
   const domString = `
     <form id="${obj.firebaseKey ? `update-vocab--${obj.firebaseKey}` : 'submit-vocab'}" class="mb-4">
@@ -22,6 +23,7 @@ const addVocabForm = (obj = {}) => {
           <option value="JavaScript" ${obj.language === 'JavaScript' ? 'selected' : ''}>JavaScript</option>
         </select>
       </div>
+      <br>
       <button type="submit" class="btn btn-primary">Submit
       </button>
     </form>`;
