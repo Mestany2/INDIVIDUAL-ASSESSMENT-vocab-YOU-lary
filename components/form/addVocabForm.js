@@ -22,6 +22,7 @@ const addVocabForm = (obj = {}) => {
           <option value="JavaScript" ${obj.language === 'JavaScript' ? 'selected' : ''}>JavaScript</option>
         </select>
       </div>
+      <br>
       <button type="submit" class="btn btn-primary">Submit
       </button>
     </form>`;

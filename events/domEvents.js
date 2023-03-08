@@ -18,9 +18,6 @@ const domEvents = (user) => {
       const [, firebaseKey] = e.target.id.split('--');
       getSingleVocab(firebaseKey).then((vocabObj) => addVocabForm(user, vocabObj));
     }
-    if (e.target.id.includes('html-btn')) {
-    //   getVocabsHTML().then(showVocabs);
-    }
   });
 };
 
