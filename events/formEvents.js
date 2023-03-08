@@ -4,7 +4,7 @@ import { showVocabs } from '../pages/vocabs';
 const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
     e.preventDefault();
-    // TODO: CLICK EVENT FOR SUBMITTING FORM FOR ADDING A BOOK
+    // TODO: CLICK EVENT FOR SUBMITTING FORM FOR ADDING A VOCABULARY
     if (e.target.id.includes('submit-vocab')) {
       const payload = {
         Vocabulary: document.querySelector('#Vocabulary').value,
@@ -20,13 +20,13 @@ const formEvents = (user) => {
         });
       });
     }
-    // TODO: CLICK EVENT FOR EDITING A BOOK
+    // TODO: CLICK EVENT FOR EDITING A VOCABULARY
     if (e.target.id.includes('update-vocab')) {
       const [, firebaseKey] = e.target.id.split('--');
       const payload = {
         Vocabulary: document.querySelector('#Vocabulary').value,
         Definition: document.querySelector('#description').value,
-        Language: document.querySelector('#language').value,
+        language: document.querySelector('#language').value,
         firebaseKey,
       };
       updateVocab(payload).then(() => {

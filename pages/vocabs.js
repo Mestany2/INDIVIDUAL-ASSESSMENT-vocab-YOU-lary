@@ -7,7 +7,6 @@ const emptyVocabs = () => {
 };
 
 const showVocabs = (array) => {
-  console.warn('my array is', array);
   clearDom();
   let domString = '';
   array.forEach((item) => {

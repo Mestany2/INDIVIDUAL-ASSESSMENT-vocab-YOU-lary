@@ -2,6 +2,7 @@ import { clearDom } from '../../utils/clearDom';
 import renderToDOM from '../../utils/renderToDom';
 
 const addVocabForm = (obj = {}) => {
+  console.warn('my Obj is', obj);
   clearDom();
   const domString = `
     <form id="${obj.firebaseKey ? `update-vocab--${obj.firebaseKey}` : 'submit-vocab'}" class="mb-4">
