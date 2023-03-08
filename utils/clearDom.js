@@ -5,11 +5,11 @@ const clearDom = () => {
   document.querySelector('#view').innerHTML = '';
 };
 
-const clearNav = () => {
-  document.querySelector('#navbarText').innerHTML = '';
+const clearBtn = () => {
+  document.querySelector('#filter-btn').innerHTML = '';
 };
 
 export {
   clearDom,
-  clearNav
+  clearBtn
 };
