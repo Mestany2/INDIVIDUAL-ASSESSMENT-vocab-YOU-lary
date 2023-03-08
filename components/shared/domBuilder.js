@@ -10,6 +10,7 @@ const domBuilder = () => {
     <button type="button" class="btn btn-success" id="java-btn">JavaScript</button>
     <button type="button" class="btn btn-danger" id="css-btn">CSS</button>
     </div>
+    <br>
     <div id="form-container"></div>
     <div id="store"></div>
     <div id="view"></div>
