@@ -11,10 +11,13 @@ body {
 
 .navbar-dark .navbar-brand {
   font-family: "Oregano", cursive !important;
-  color: wheat;
+  color: white;
   font-weight: 900;
   font-size: 2em;
-}
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de,
+    0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;  
+  }
+
 .cart-items {
   height: 300px;
   overflow: scroll;
@@ -73,7 +76,7 @@ body {
       }
       .fav-badge{
         font-size: 1em;
-        background-color: gold;
+        background-color: #03A9F4;
       }
     }
 
@@ -99,12 +102,46 @@ body {
 }
 
 .card-language{
-  color: brown;
+  color: #F50057;
 }
 .card{
   backdrop-filter: blur(0px); background-color: rgba(255, 255, 255, 0.705); border-radius: 20px; box-shadow: 15px 15px 68px 0px rgba(236, 198, 28, 0.5), inset -0px -0px 16px 0px rgba(236, 198, 28, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255);
 }
+.card-header{
+    text-decoration: none;
+    color: black;
+    font-family:Rockwell;
+    animation:ease-in-out infinite alternate;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228dff,
+        0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff,
+        0 0 35px #228dff, 0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
+  }
 
 #filter-btn{
   margin-top: 10px;
+}
+
+#text-style{
+  font-size: 5rem;
+  font-weight: 200;
+  font-style: italic;
+  color:#03A9F4;
+  padding: 2rem 6rem 5.5rem;
+  border: 0.4rem solid #F50057;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  animation: flicker 2.5s infinite alternate;     
+}
+
+#text-styles{
+  margin-top:10%;
+  font-size: 5rem;
+  font-weight: 500;
+  font-style: italic;
+  color:#03A9F4;
+  padding: 2rem 6rem 5.5rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  animation: flicker 2.5s infinite alternate;     
 }
